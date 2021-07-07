@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "kvisafastReport": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kvisafastReport"
+    }
+  },
+  "defaultProject": "kvisafastReport",
+  "cli": {
+    "analytics": "a65ac4a6-2062-471b-bdcb-2b4416c96a9b"
+  }
 }
