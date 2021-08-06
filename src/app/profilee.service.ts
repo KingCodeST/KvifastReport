@@ -15,7 +15,7 @@ export class ProfileeService{
     constructor(private http: HttpClient){}
 
     public getProfiles():Observable<Profilee[]>{
-        return this.http.get<Profilee[]>(`${this.apiServerUrl}/profilee/all`);
+        return this.http.get<Profilee[]>(`${this.apiServerUrl}/profiles`);
     }
 
     public addProfiles(profilee:Profilee):Observable<Profilee>{
