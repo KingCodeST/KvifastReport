@@ -10,7 +10,7 @@ import { ProfileeService } from './profilee.service';
 })
 export class AppComponent implements OnInit {
   title = 'kvisafastReport';
-  public profilee:Profilee[];
+  public profilees:Profilee[];
   
   constructor(private profileeService: ProfileeService){}
 
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   public getProfilees(): void{
     this.profileeService.getProfiles().subscribe(
       (response:Profilee[])=>{
-        this.profilee =response;
+        this.profilees =response;
       },
       (error: HttpErrorResponse) =>{
         alert(error.message);
