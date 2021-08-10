@@ -5,7 +5,4 @@ export interface Services{
     price:string;
     description:string;
 
-
-
-
 }
