@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-
-
-
+import { Observable } from "rxjs";
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -9,5 +9,10 @@ import { Injectable } from '@angular/core';
 })
 export class PaymentmodeService {
 
-  constructor() { }
+
+  constructor(private http: HttpClient){}
+
+
+  
+
 }
