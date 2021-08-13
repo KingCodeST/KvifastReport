@@ -19,8 +19,8 @@ public addCurrentStatus(currentstatus:CurrentStatus):Observable<CurrentStatus>{
     return this.http.post<CurrentStatus>('${this.apiServerUrl}/currentstatuse',currentstatus);
 }
 
-public deleteCurrentStatus(paymeentmodeId: number):Observable<void>{
-    return this.http.delete<void>('${this.apiServerUrl}/currentstatus/{paymeentmodeId}');
+public deleteCurrentStatus(currentstatusID: number):Observable<void>{
+    return this.http.delete<void>('${this.apiServerUrl}/currentstatus/{currentstatusID}');
 }
 
 public updateCurrentStatus(currentstatusID:CurrentStatus):Observable<CurrentStatus>{
