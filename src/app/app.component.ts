@@ -21,15 +21,21 @@ import { ServicesService } from './services.service';
 export class AppComponent implements OnInit {
   title = 'kvisafastReport';
   public profilees:Profilee[];
-  public services:Services[];
-  public currentstatus:CurrentStatus[];
-  public payment:Payment[];
-  public paymentmode:PaymentMode[];
+  public servicess:Services[];
+  public currentstatuss:CurrentStatus[];
+  public payments:Payment[];
+  public paymentmodes:PaymentMode[];
   
-  constructor(private profileeService: ProfileeService,servicesService:ServicesService,currentstatusservice:CurrentstatusService,paymentmodes:PaymentmodeService,paymentsvc:PaymentService){}
+  constructor(
+      private profileeService: ProfileeService,
+      private servicesService:ServicesService,
+      private currentstatusservice:CurrentstatusService,
+      private paymentmodess:PaymentmodeService,
+      private paymentsvc:PaymentService){}
   
   ngOnInit(){
     this.getProfilees();
+    
     
   }
 
@@ -42,6 +48,51 @@ export class AppComponent implements OnInit {
         alert(error.message);
       }
       // #holla sevem
+    );
+  }
+
+  public getServiceServices(): void{
+    this.servicesService.getServicesService().subscribe(
+      (response:Services[])=>{
+        this.servicess =response;
+      },
+      (error: HttpErrorResponse) =>{
+        alert(error.message);
+      }
+    );
+  }
+
+  public getCurrentStatus(): void{
+    this.currentstatusservice.getCurrentStatus().subscribe(
+      (response:CurrentStatus[])=>{
+        this.currentstatuss =response;
+      },
+      (error:HttpErrorResponse) =>{
+        alert(error.message);
+      }
+    );
+  }
+
+  public getPayment(): void{
+    this.paymentsvc.getPayment().subscribe(
+      (response:Payment[])=>{
+        this.payments = response;
+      },
+      (error:HttpErrorResponse) =>{
+        alert(error.message);
+      }
+    );
+  }
+
+  public getPaymentMode(): void{
+    this.paymentmodess.getPaymentMode().subscribe(
+      (response:PaymentMode[])=>{
+        this.paymentmodes = response;
+      },
+      (error:HttpErrorResponse) =>
+      {
+        alert(error.message);
+      }
     );
   }
 
