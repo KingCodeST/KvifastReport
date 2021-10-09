@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Observable } from "rxjs";
 import { HttpClient } from '@angular/common/http';
 import { Profilee } from "./profilee";
@@ -8,6 +8,9 @@ import { environment } from 'src/environments/environment';
 @Injectable({
     providedIn: 'root'
 })
+
+@Input() const childItem="";
+
 export class ProfileeService{
     private apiServerUrl =environment.apiBaseUrl;
 
