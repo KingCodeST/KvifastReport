@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Profilee } from './profilee';
 import { ProfileeService } from './profilee.service';
 import { Payment } from './payment';
-import { PaymentService } from './payment.service';
+import { PaymentService } from './project250/payment_s/payment.service';
 import { PaymentMode } from './paymentmode';
-import { PaymentmodeService } from './paymentmode.service';
-import { CurrentStatus } from './currentstatus';
+import { PaymentmodeService } from './project250/paymentmode/paymentmode.service';
+import { CurrentStatus } from './project250/current_status/currentstatus';
 import { CurrentstatusService } from './currentstatus.service';
-import { Services } from './services';
+import { Services } from './project250/service_/services';
 import { ServicesService } from './services.service';
 
 
