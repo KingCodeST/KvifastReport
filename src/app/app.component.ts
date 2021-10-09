@@ -35,8 +35,11 @@ export class AppComponent implements OnInit {
   
   ngOnInit(){
     this.getProfilees();
-    
-    
+    this.getCurrentStatus();
+    this.getPayment();
+    this.getPaymentMode();
+    this.getServiceServices();
+
   }
 
   public getProfilees(): void{
