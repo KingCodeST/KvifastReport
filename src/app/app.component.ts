@@ -96,6 +96,6 @@ export class AppComponent implements OnInit {
     );
   }
 
-  parentItem ='Food';
+ 
 
 }
