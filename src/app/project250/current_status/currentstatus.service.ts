@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse,HttpRequest, HttpHeaders} from '@angular/common/http';
 import { CurrentStatus } from './currentstatus';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CurrentstatusService {
 
   constructor(private http: HttpClient){}
