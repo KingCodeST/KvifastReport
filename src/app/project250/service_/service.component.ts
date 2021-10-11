@@ -17,6 +17,7 @@ export class ServicesComponent implements OnInit{
 
     ngOnInit(): void{
         this.getService();
+
     }
 
     getService():void{
@@ -28,5 +29,7 @@ export class ServicesComponent implements OnInit{
         });
         
     }
+
+    
 
 }
