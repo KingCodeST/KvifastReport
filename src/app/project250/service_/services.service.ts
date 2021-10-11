@@ -19,7 +19,7 @@ export class ServicesService {
 
 
   public getServicesService():Observable<Services[]>{
-    return this.http.get<Services[]>(`${this.apiServerUrl}/services`);
+    return this.http.get<Services[]>(`${this.apiServerUrl}/servie`);
   }
 
   public addServicesService(servicesservice:Services):Observable<Services>{

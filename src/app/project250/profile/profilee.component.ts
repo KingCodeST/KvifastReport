@@ -14,13 +14,13 @@ import { ProfileeService } from "./profilee.service";
 
 export class ProfileComponent implements OnInit{
 
-    profile:Profilee[];
+    profiles:Profilee[];
 
     constructor(private _profile: ProfileeService){}
 
     ngOnInit():void{
         this._profile.getProfiles()
-        .subscribe((profileData)=>{this.profile =profileData, console.log(profileData)
+        .subscribe((profileData)=>{this.profiles =profileData, console.log(profileData)
         },(error)=>{
             console.log(error);
     
