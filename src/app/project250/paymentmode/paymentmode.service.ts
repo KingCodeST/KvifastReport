@@ -17,7 +17,7 @@ export class PaymentmodeService {
 
 
   public getPaymentMode():Observable<PaymentMode[]>{
-             return this.http.get<PaymentMode[]>(this.baseURL);
+             return this.http.get<PaymentMode[]>(`${this.baseURL}/paymentmodes`);
          }
     
          public addPaymentMode(paymentmode:PaymentMode):Observable<PaymentMode>{

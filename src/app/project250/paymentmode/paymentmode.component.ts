@@ -14,14 +14,14 @@ export class PaymentmodeComponent implements OnInit{
 
     _paymentmode : PaymentMode[];
 
-    constructor(private _paymentMode: PaymentmodeService){}
+    constructor(private _paymentModes: PaymentmodeService){}
 
     ngOnInit():void{
         this.getPaymentMode();
     }
 
     getPaymentMode(): void{
-        this._paymentMode.getPaymentMode()
+        this._paymentModes.getPaymentMode()
         .subscribe((paymentmodeData)=>{this._paymentmode =paymentmodeData, console.log(paymentmodeData)
         },
         (error) =>{

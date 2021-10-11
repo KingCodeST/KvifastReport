@@ -14,7 +14,7 @@ export class PaymentService {
   constructor(private http: HttpClient){}
 
   public getPayment():Observable<Payment[]>{
-    return this.http.get<Payment[]>(this.apiServerUrl);
+    return this.http.get<Payment[]>(`${this.apiServerUrl}/payments`);
 }
 
 public addPayment(payments:Payment):Observable<Payment>{
