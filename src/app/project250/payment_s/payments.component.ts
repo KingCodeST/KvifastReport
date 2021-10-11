@@ -20,7 +20,7 @@ export class PaymentComponent implements OnInit{
 
     getPayment(): void{
         this._paymentservice.getPayment()
-        .subscribe((paymentData)=>{this.payment =paymentData, console.log(paymentData)
+        .subscribe((paymentData)=>{this.payment = paymentData, console.log(paymentData)
         },
         (error)=>{
                 console.log(error);
