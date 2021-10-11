@@ -14,15 +14,15 @@ export class PaymentService {
   constructor(private http: HttpClient){}
 
   public getPayment():Observable<Payment[]>{
-    return this.http.get<Payment[]>('${this.apiServerUrl}/payments');
+    return this.http.get<Payment[]>(this.apiServerUrl);
 }
 
-public addPayment(paymentmode:Payment):Observable<Payment>{
-    return this.http.post<Payment>('${this.apiServerUrl}/payment',paymentmode);
+public addPayment(payments:Payment):Observable<Payment>{
+    return this.http.post<Payment>(`${this.apiServerUrl}/payment`,payments);
 }
 
-public deletePayment(paymeentmodeId: number):Observable<void>{
-    return this.http.delete<void>('${this.apiServerUrl}/payment/{paymeentmodeId}');
+public deletePayment(paymentId: number):Observable<void>{
+    return this.http.delete<void>('${this.apiServerUrl}/payment/{paymentId}');
 }
 
 public updatePayment(paymentId:Payment):Observable<Payment>{

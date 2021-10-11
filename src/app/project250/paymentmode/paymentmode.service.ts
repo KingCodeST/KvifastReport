@@ -10,25 +10,26 @@ import { PaymentMode } from './paymentmode';
 })
 export class PaymentmodeService {
 
-    private apiServerUrl:string ='http://localhost:59555' 
+    private baseURL:string ='//localhost:59555';
+    private id:string;
 
     constructor(private http: HttpClient){}
 
 
   public getPaymentMode():Observable<PaymentMode[]>{
-             return this.http.get<PaymentMode[]>('${this.apiServerUrl}/paymentmodes');
+             return this.http.get<PaymentMode[]>(this.baseURL);
          }
     
          public addPaymentMode(paymentmode:PaymentMode):Observable<PaymentMode>{
-             return this.http.post<PaymentMode>('${this.apiServerUrl}/paymentmode',paymentmode);
+             return this.http.post<PaymentMode>(`${this.baseURL}/paymentmode`,paymentmode);
          }
     
-         public deletePaymentMode(paymeentmodeId: number):Observable<void>{
-             return this.http.delete<void>('${this.apiServerUrl}/paymentmodes/{paymeentmodeId}');
+         public deletePaymentMode(paymentmodeId: number):Observable<void>{
+             return this.http.delete<void>(`${this.baseURL}/paymentmodes/{paymentmodeId}`);
          }
     
          public updatePaymentMode(paymentmode:PaymentMode):Observable<PaymentMode>{
-             return this.http.put<PaymentMode>('${this.apiServerUrl}/paymentmodes/{id}',paymentmode);
+             return this.http.put<PaymentMode>(`${this.baseURL}/paymentmodes/{id}`,paymentmode);
          }
 
 }

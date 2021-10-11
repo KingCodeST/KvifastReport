@@ -12,7 +12,7 @@ import { PaymentmodeService } from "./paymentmode.service";
 
 export class PaymentmodeComponent implements OnInit{
 
-    paymentmode : PaymentMode[];
+    _paymentmode : PaymentMode[];
 
     constructor(private _paymentMode: PaymentmodeService){}
 
@@ -22,7 +22,7 @@ export class PaymentmodeComponent implements OnInit{
 
     getPaymentMode(): void{
         this._paymentMode.getPaymentMode()
-        .subscribe((paymentmodeData)=>{this.paymentmode =paymentmodeData, console.log(paymentmodeData)
+        .subscribe((paymentmodeData)=>{this._paymentmode =paymentmodeData, console.log(paymentmodeData)
         },
         (error) =>{
             console.log(error);
