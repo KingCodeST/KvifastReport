@@ -1,6 +1,5 @@
 import { style } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
-
 import { Profilee } from "./profilee";
 import { ProfileeService } from "./profilee.service";
 
