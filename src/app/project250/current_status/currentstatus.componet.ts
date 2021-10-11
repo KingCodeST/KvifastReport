@@ -12,8 +12,12 @@ import { CurrentstatusService } from "./currentstatus.service";
 
 export class CurrentStatusComponent implements OnInit{
 
+    
 
         currentstatus: CurrentStatus[];
+
+       
+        
 
         constructor(private _currentService: CurrentstatusService){}
 
