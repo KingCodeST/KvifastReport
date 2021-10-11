@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ServicesService {
 
 
-  private apiServerUrl:string ='http://localhost:59555' 
+  private apiServerUrl:string ='http://localhost:59555';
 
 
   constructor(private http: HttpClient) { }
