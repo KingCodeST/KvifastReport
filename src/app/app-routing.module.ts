@@ -9,10 +9,21 @@ import { ServicesComponent } from './project250/service_/service.component';
 
 const routes: Routes = [
   {path:'currentstatus',component:CurrentStatusComponent},
+
   {path:'payment',component:PaymentComponent},
+  {path:'pay',component:PaymentComponent},
+  {path:'cancel',component:PaymentComponent},
   {path:'paymentmode',component:PaymentmodeComponent},
+  {path:'choose',component:PaymentmodeComponent},
   {path:'service',component:ServicesComponent},
-  {path:'profile',component:ProfileComponent}
+  {path:'add',component:ServicesComponent},
+  {path:'edit',component:ServicesComponent},
+  {path:'delete',component:ServicesComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'addprofile',component:ProfileComponent},
+  {path:'edit',component:ProfileComponent},
+  {path:'delete',component:ProfileComponent}
+
 
 ];
 
