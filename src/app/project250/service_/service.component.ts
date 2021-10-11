@@ -1,13 +1,32 @@
 import { Component, OnInit } from "@angular/core";
 import { Services } from "./services";
+import { ServicesService } from "./services.service";
 
 @Component({
 
-    selector:'app-root',
+    selector:'app-service',
     templateUrl:'./service.component.html',
     styleUrls:['./service.component.css']
 })
 
-export class ServicesComponent{
+export class ServicesComponent implements OnInit{
+
+    _services: Services[];
+
+    constructor(private _serviceService: ServicesService){}
+
+    ngOnInit(): void{
+        this.getService();
+    }
+
+    getService():void{
+        this._serviceService.getServicesService()
+        .subscribe((serviceData) =>{this._services =serviceData, console.log(serviceData)
+        },
+        (error)=>{
+        console.log(error);
+        });
+        
+    }
 
 }

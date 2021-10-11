@@ -12,7 +12,8 @@ import { environment } from 'src/environments/environment';
 
 
 export class ProfileeService{
-    private apiServerUrl =environment.apiBaseUrl;
+    
+    private apiServerUrl:string ='http://localhost:59555' 
 
 
     constructor(private http: HttpClient){}

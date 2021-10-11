@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpResponse,HttpRequest, HttpHeaders} from '@angular/common/http';
 import { CurrentStatus } from './currentstatus';
+import { environment } from 'src/environments/environment';
 
-@Injectable()
+@Injectable({
+  providedIn:'root'
+})
+
 export class CurrentstatusService {
 
-  constructor(private http: HttpClient){}
+  private apiServerUrl:string ='http://localhost:59555' 
+
+  constructor(private http: HttpClient){} 
 
   public getCurrentStatus():Observable<CurrentStatus[]>{
     return this.http.get<CurrentStatus[]>('${this.apiServerUrl}/currentstatuses');

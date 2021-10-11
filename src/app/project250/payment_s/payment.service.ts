@@ -9,6 +9,8 @@ import { Payment } from './payment';
 })
 export class PaymentService {
 
+  private apiServerUrl:string ='http://localhost:59555' 
+
   constructor(private http: HttpClient){}
 
   public getPayment():Observable<Payment[]>{

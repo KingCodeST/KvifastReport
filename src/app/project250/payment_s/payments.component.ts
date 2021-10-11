@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { error } from "console";
+
 import { Payment } from "./payment";
 import { PaymentService } from "./payment.service";
 

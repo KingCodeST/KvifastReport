@@ -12,14 +12,14 @@ import { environment } from 'src/environments/environment';
 export class ServicesService {
 
 
-  private apiServerUrl =environment.apiBaseUrl;
+  private apiServerUrl:string ='http://localhost:59555' 
 
 
   constructor(private http: HttpClient) { }
 
 
   public getServicesService():Observable<Services[]>{
-    return this.http.get<Services[]>(`${this.apiServerUrl}/serve`);
+    return this.http.get<Services[]>(`${this.apiServerUrl}/services`);
   }
 
   public addServicesService(servicesservice:Services):Observable<Services>{

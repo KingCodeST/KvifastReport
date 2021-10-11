@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     PaymentComponent,
     ProfileComponent,
     ServicesComponent,
-    PaymentComponent
+    PaymentmodeComponent
 
 
   ],
@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     
   ],
-  providers: [CurrentstatusService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

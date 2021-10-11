@@ -1,11 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { error } from "console";
 import { CurrentStatus } from "./currentstatus";
 import { CurrentstatusService } from "./currentstatus.service";
 
 @Component({
 
-    selector: 'app-root',
+    selector: 'app-currentstatus',
     templateUrl:'./currentstatus.component.html',
     styleUrls:['./currentstatus.componet.css']
 
@@ -20,7 +19,7 @@ export class CurrentStatusComponent implements OnInit{
 
         ngOnInit(): void{
             this.getCurrentStatus();
-        }
+        } 
 
     getCurrentStatus(): void{
           this._currentService.getCurrentStatus()
