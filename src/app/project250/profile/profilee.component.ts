@@ -6,7 +6,7 @@ import { ProfileeService } from "./profilee.service";
 
 @Component({
 
-    selector:'app-root',
+    selector:'app-profile',
     templateUrl:'./profilee.component.html',
     styleUrls:['./profile.component.css']
 

@@ -4,7 +4,7 @@ import { Payment } from "./payment";
 import { PaymentService } from "./payment.service";
 
 @Component({
-    selector:'app-root',
+    selector:'app-payment',
     templateUrl:'./payment.component.html',
     styleUrls:['./payment.component.css']
 })
