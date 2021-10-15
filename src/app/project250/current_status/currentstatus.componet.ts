@@ -1,28 +1,29 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { CurrentStatus } from "./currentstatus";
 import { CurrentstatusService } from "./currentstatus.service";
 
 @Component({
 
     selector: 'app-currentstatus',
-    templateUrl:'./currentstatus.component.html',
-    styleUrls:['./currentstatus.componet.css']
+    template:'<h1> {{ currentstatus}} </h1>',
+    // styleUrls:['./currentstatus.componet.css']
 
 })
 
 export class CurrentStatusComponent implements OnInit{
 
-    
+    public title="view";
 
-        currentstatus: CurrentStatus[];
+   currentstatus: CurrentStatus[];
 
-       
-        
+        @Input() childItem = '';
+        classes = 'special';
 
         constructor(private _currentService: CurrentstatusService){}
 
         ngOnInit(): void{
             this.getCurrentStatus();
+            
         } 
 
     getCurrentStatus(): void{
