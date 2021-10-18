@@ -5,8 +5,8 @@ import { CurrentstatusService } from "./currentstatus.service";
 @Component({
 
     selector: 'app-currentstatus',
-    template:'<h1> {{ currentstatus}} </h1>',
-    // styleUrls:['./currentstatus.componet.css']
+    templateUrl:'./currentstatus.component.html',
+    styleUrls:['./currentstatus.componet.css']
 
 })
 
