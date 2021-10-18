@@ -10,11 +10,13 @@ import { PaymentComponent } from './project250/payment_s/payments.component';
 import { PaymentmodeComponent } from './project250/paymentmode/paymentmode.component';
 import { CurrentstatusService } from './project250/current_status/currentstatus.service';
 import { HttpClientModule } from '@angular/common/http';
+import { home } from './project250/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    home,
     CurrentStatusComponent,
     PaymentComponent,
     ProfileComponent,
