@@ -13,8 +13,9 @@ import { CurrentstatusService } from "./currentstatus.service";
 export class CurrentStatusComponent implements OnInit{
 
     public title="view";
+    public words=["crypton","Jupita","Mars","Venus","Pluto","Earth"];
 
-   currentstatus: CurrentStatus[];
+  public currentstatus: CurrentStatus[];
 
         @Input() childItem = '';
         classes = 'special';
