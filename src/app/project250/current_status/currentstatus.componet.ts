@@ -6,24 +6,25 @@ import { CurrentstatusService } from "./currentstatus.service";
 
     selector: 'app-currentstatus',
     templateUrl:'./currentstatus.component.html',
-    styleUrls:['./currentstatus.componet.css']
-
+    styleUrls:['./currentstatus.component.css']
+   
 })
 
 export class CurrentStatusComponent implements OnInit{
 
     public title="view";
-    public words=["crypton","Jupita","Mars","Venus","Pluto","Earth"];
+    
 
-  public currentstatus: CurrentStatus[];
+    public currentstatus: CurrentStatus[];
 
-        @Input() childItem = '';
-        classes = 'special';
+  
+       
 
         constructor(private _currentService: CurrentstatusService){}
 
         ngOnInit(): void{
             this.getCurrentStatus();
+
             
         } 
 
@@ -35,5 +36,10 @@ export class CurrentStatusComponent implements OnInit{
               console.log(error);
           });
         }
+
+        
+        
+
+        
 
 }
