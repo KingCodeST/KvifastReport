@@ -30,7 +30,7 @@ export class CurrentStatusComponent implements OnInit{
 
     getCurrentStatus(): void{
           this._currentService.getCurrentStatus()
-          .subscribe((currentstateData) => {this.currentstatus =currentstateData, console.log(currentstateData)
+          .subscribe((currentstateData:CurrentStatus[]) => {this.currentstatus =currentstateData, console.log(currentstateData)
         },
           (error)=>{
               console.log(error);
