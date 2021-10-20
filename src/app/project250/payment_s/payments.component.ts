@@ -18,13 +18,16 @@ export class PaymentComponent implements OnInit{
         this.getPayment();
     }
 
-    getPayment(): void{
+    getPayment(){
         this._paymentservice.getPayment()
-        .subscribe((paymentData)=>{this.payment = paymentData, console.log(paymentData)
+        .subscribe(
+            (paymentData: Payment[])=>{this.payment = paymentData, console.log(paymentData)
         },
         (error)=>{
                 console.log(error);
         });
     }
+
+    
 
 }
