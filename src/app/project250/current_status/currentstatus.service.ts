@@ -15,8 +15,12 @@ export class CurrentstatusService {
 
   constructor(private http: HttpClient){} 
 
-  public getCurrentStatus():Observable<CurrentStatus[]>{
-    return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/currentstatuses`);
+//   public getCurrentStatus():Observable<CurrentStatus[]>{
+//     return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/currentstatuses`);
+// }
+
+public getAll():Observable<CurrentStatus[]>{
+  return this.http.get<CurrentStatus[]>(this.apiServerUrl);
 }
 
 public addCurrentStatus(currentstatus:CurrentStatus):Observable<CurrentStatus>{
