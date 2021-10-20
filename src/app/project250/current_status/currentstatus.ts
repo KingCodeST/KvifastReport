@@ -5,7 +5,4 @@ export interface CurrentStatus{
     profile_id:string;
     status:string;
 
-
-
-
 }
