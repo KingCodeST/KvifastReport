@@ -11,17 +11,15 @@ import { environment } from 'src/environments/environment';
 
 export class CurrentstatusService {
 
-  private apiServerUrl:string ='http://localhost:59555/currentstatuses' 
+  private apiServerUrl:string ='http://localhost:59555' 
 
   constructor(private http: HttpClient){} 
 
-//   public getCurrentStatus():Observable<CurrentStatus[]>{
-//     return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/currentstatuses`);
-// }
-
-public getAll():Observable<CurrentStatus[]>{
-  return this.http.get<CurrentStatus[]>(this.apiServerUrl);
+  public getCurrentStatus():Observable<CurrentStatus[]>{
+    return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/currentstatuses`);
 }
+
+
 
 public addCurrentStatus(currentstatus:CurrentStatus):Observable<CurrentStatus>{
     return this.http.post<CurrentStatus>(`${this.apiServerUrl}/currentstatuse`,currentstatus);
