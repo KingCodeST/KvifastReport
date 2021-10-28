@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 
 export class CurrentstatusService {
 
-  private apiServerUrl:string ='http://localhost:59555' 
+  private apiServerUrl =environment.apiBaseUrl;
 
   constructor(private http: HttpClient){} 
 
