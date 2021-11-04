@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
 import { Services } from "./services";
 import { ServicesService } from "./services.service";
 
@@ -28,6 +29,12 @@ export class ServicesComponent implements OnInit{
         console.log(error);
         });
         
+    }
+
+    public onAddService(addForm: NgForm): void{
+        document.getElementById('add-')
+
+
     }
 
     

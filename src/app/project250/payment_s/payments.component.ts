@@ -16,6 +16,9 @@ export class PaymentComponent implements OnInit{
 
     ngOnInit(): void{
         this.getPayment();
+        this.postPayment();
+        this.updatePayment();
+        this.deletePayment();
     }
 
     getPayment(){
@@ -26,6 +29,18 @@ export class PaymentComponent implements OnInit{
         (error)=>{
                 console.log(error);
         });
+    }
+
+    postPayment(){
+
+    }
+
+    updatePayment(){
+
+    }
+
+    deletePayment(){
+        
     }
 
     
