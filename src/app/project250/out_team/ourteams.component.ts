@@ -9,7 +9,6 @@ import { Ourteams } from "./ourteams";
     styleUrls:['./ourteam.component.css']
 })
 
-
 export class OurteamsComponent implements OnInit{
 
 
@@ -35,7 +34,7 @@ export class OurteamsComponent implements OnInit{
 
     }
     deleteOurteams(){
-        
+
     }
 
 
