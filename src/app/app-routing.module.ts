@@ -6,6 +6,7 @@ import { PaymentmodeComponent } from './project250/paymentmode/paymentmode.compo
 import { PaymentComponent } from './project250/payment_s/payments.component';
 import { ProfileComponent } from './project250/profile/profilee.component';
 import { ServicesComponent } from './project250/service_/service.component';
+import { OurteamsComponent } from './project250/out_team/ourteams.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'paymentmode',component:PaymentmodeComponent},
   {path:'service',component:ServicesComponent},
   {path:'profile',component:ProfileComponent},
+  {path:'ourteams',component:OurteamsComponent},
 
 
  // otherwise redirect to home
