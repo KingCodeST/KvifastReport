@@ -26,7 +26,7 @@ import { OurteamsComponent } from './project250/out_team/ourteams.component';
     ProfileComponent,
     ServicesComponent,
     PaymentmodeComponent,
-    OurteamsComponent,
+    OurteamsComponent
    
    
 
