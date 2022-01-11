@@ -12,9 +12,9 @@ import { CurrentstatusService } from './project250/current_status/currentstatus.
 import { HttpClientModule } from '@angular/common/http';
 import { home } from './project250/home/home.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
-import { ComponentLoginComponent } from './component-login/component-login.component';
-import { ComponentAdminComponent } from './project250/component-admin/component-admin.component';
-import { ComponentUserComponent } from './component-user/component-user.component';
+// import { ComponentLoginComponent } from './project250/component-login/component-login.component';
+// import { ComponentAdminComponent } from './project250/component-admin/component-admin.component';
+// import { ComponentUserComponent } from './project250/component-user/component-user.component';
 
 
 @NgModule({
@@ -27,10 +27,8 @@ import { ComponentUserComponent } from './component-user/component-user.componen
     ServicesComponent,
     PaymentmodeComponent,
     OurteamsComponent,
-    ComponentLoginComponent,
-    ComponentAdminComponent,
-    ComponentUserComponent,
-
+   
+   
 
   ],
   imports: [
