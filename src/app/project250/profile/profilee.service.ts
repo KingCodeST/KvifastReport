@@ -19,7 +19,7 @@ export class ProfileeService{
     constructor(private http: HttpClient){}
 
     public getProfiles():Observable<Profilee[]>{
-        return this.http.get<Profilee[]>(`${this.apiServerUrl}Kvisafast/profiles/`);
+        return this.http.get<Profilee[]>(`${this.apiServerUrl}/Kvisafast/profiles/`);
     }
 
     public addProfiles(profilee:Profilee):Observable<Profilee>{
