@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-component-admin',
-  templateUrl: './component-admin.component.html',
-  styleUrls: ['./component-admin.component.css']
+  templateUrl: './componentadmin.component.html',
+  styleUrls: ['./componentadmin.component.css']
 })
 export class ComponentAdminComponent implements OnInit {
 

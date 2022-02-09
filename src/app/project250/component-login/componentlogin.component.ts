@@ -3,8 +3,8 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-component-login',
-  templateUrl: './component-login.component.html',
-  styleUrls: ['./component-login.component.css']
+  templateUrl: './componentadmin.component.html',
+  styleUrls: ['./componentlogin.component.css']
 })
 export class ComponentLoginComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class ComponentLoginComponent implements OnInit {
   }
 
   loginUser(){
-    
+
   }
 
 }

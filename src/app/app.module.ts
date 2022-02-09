@@ -13,9 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { home } from './project250/home/home.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
 import { FormsModule } from '@angular/forms';
-// import { ComponentLoginComponent } from './project250/component-login/component-login.component';
-// import { ComponentAdminComponent } from './project250/component-admin/component-admin.component';
-// import { ComponentUserComponent } from './project250/component-user/component-user.component';
+
+
 
 
 @NgModule({
@@ -27,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     ServicesComponent,
     PaymentmodeComponent,
-    OurteamsComponent
+    OurteamsComponent,
+    
    
    
 
