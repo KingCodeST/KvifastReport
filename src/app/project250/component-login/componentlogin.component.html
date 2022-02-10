@@ -1,4 +1,5 @@
 <!--login modal-->
+<!-- #loginform="ngForm" -->
 <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -7,7 +8,7 @@
             <h1 class="text-center">Login</h1>
         </div>
         <div class="modal-body">
-            <form class="form col-md-12 center-block" #loginform="ngForm" (ngSubmit)="loginUser()">
+            <form class="form col-md-12 center-block"  (ngSubmit)="loginUser()">
               <div class="form-group">
                 <input type="text" class="form-control input-lg" placeholder="Email">
               </div>
