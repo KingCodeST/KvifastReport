@@ -1,6 +1,6 @@
-export interface Componentuser{
+export class Componentuser{
 
-    id:String;
+   
     email:String;
     profileid:String;
     name:String;
@@ -11,4 +11,5 @@ export interface Componentuser{
     description:String;
     isActive:boolean;
     
+    constructor(){}
 }

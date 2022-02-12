@@ -30,3 +30,6 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
+$(function(){
+  $("body").addClass("login breakpoint-1024");
+  });
