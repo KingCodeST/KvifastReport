@@ -1,52 +1,71 @@
-<div id="main-wrapper" class="container">
-  <div class="row justify-content-center">
-      <div class="col-xl-10">
-          <div class="card border-0">
-              <div class="card-body p-0">
-                  <div class="row no-gutters">
-                      <div class="col-lg-6">
-                          <div class="p-5">
-                              <div class="mb-5">
-                                  <h3 class="h4 font-weight-bold text-theme">Register</h3>
-                              </div>
-                              <h6 class="h5 mb-0">Just Do Register.</h6>
-                              <p class="text-muted mt-2 mb-5">If You Really Want To Know, Look In The Register.</p>
-                              <form>
-                                  <div class="form-group">
-                                      <label for="yourName">Your name</label>
-                                      <input type="text" class="form-control" id="yourName" />
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="exampleInputEmail1">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" />
-                                  </div>
-                                  <div class="form-group mb-5">
-                                      <label for="exampleInputPassword1">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1" />
-                                  </div>
-                                  <button type="submit" class="btn btn-theme">Register</button>
-                              </form>
-                          </div>
-                      </div>
-                      <div class="col-lg-6 d-none d-lg-inline-block">
-                          <div class="account-block rounded-right">
-                              <div class="overlay rounded-right"></div>
-                              <div class="account-testimonial">
-                                  <h4 class="text-white mb-4">This beautiful theme yours!</h4>
-                                  <p class="lead text-white">"Best investment i made for a long time. Can only recommend it for other users."</p>
-                                  <p>- Admin User</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- end card-body -->
-          </div>
-          <!-- end card -->
-          <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="login.html" class="text-primary ml-1">login</a></p>
-          <!-- end row -->
-      </div>
-      <!-- end col -->
-  </div>
-  <!-- Row -->
-</div>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<div class="container bootstrap snippets bootdey">
+    
+
+    <div class="omb_login">
+        <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
+		<div class="row omb_row-sm-offset-3 omb_socialButtons">
+    	    <div class="col-xs-4 col-sm-2">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="fa fa-facebook visible-xs"></i>
+			        <span class="hidden-xs">Facebook</span>
+		        </a>
+	        </div>
+        	<div class="col-xs-4 col-sm-2">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+			        <i class="fa fa-twitter visible-xs"></i>
+			        <span class="hidden-xs">Twitter</span>
+		        </a>
+	        </div>	
+        	<div class="col-xs-4 col-sm-2">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-google">
+			        <i class="fa fa-google-plus visible-xs"></i>
+			        <span class="hidden-xs">Google+</span>
+		        </a>
+	        </div>	
+		</div>
+
+		<div class="row omb_row-sm-offset-3 omb_loginOr">
+			<div class="col-xs-12 col-sm-6">
+				<hr class="omb_hrOr">
+				<span class="omb_spanOr">or</span>
+			</div>
+		</div>
+
+		<div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-6">	
+			    <form class="omb_loginForm" (ngSubmit)="loginUser()" action="" autocomplete="off" method="POST">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="text"  class="form-control" name="username" placeholder="email address" [(ngModel)]="user.email"  >
+					</div>
+					<span class="help-block"></span>
+										
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+						<input  type="password" class="form-control" name="password" placeholder="Password"  [(ngModel)]="user.password" >
+					</div>
+                    <span class="help-block"> Password error </span>
+
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+				</form>
+			</div>
+    	</div>
+		<div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-3">
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me">Remember Me
+				</label>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<p class="omb_forgotPwd">
+					<a href="#">Forgot password?</a>
+				</p>
+			</div>
+		</div>	    	
+	</div>
+
+
+
+        </div>
