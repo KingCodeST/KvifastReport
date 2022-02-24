@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ServiceloginService } from './servicelogin.service';
 import { Componentuser } from '../component-user/componentuser';
 import { Router } from '@angular/router';
-import { error } from 'console';
+
 
 @Component({
   selector: 'app-component-login',

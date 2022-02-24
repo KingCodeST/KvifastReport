@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CurrentStatusComponent } from './project250/current_status/currentstatus.componet';
 import { ProfileComponent } from './project250/profile/profilee.component';
@@ -9,11 +10,14 @@ import { PaymentmodeComponent } from './project250/paymentmode/paymentmode.compo
 import { HttpClientModule } from '@angular/common/http';
 import { home } from './project250/home/home.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
-import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 
 
-
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,9 @@ import { AppRoutingModule } from './app-routing.module';
 
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     HttpClientModule
     
   ],
