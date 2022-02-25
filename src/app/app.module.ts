@@ -10,7 +10,6 @@ import { PaymentmodeComponent } from './project250/paymentmode/paymentmode.compo
 import { HttpClientModule } from '@angular/common/http';
 import { home } from './project250/home/home.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
-
 import { AppRoutingModule } from './app-routing.module';
 
 
