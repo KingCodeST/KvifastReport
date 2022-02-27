@@ -2,17 +2,35 @@
   <h3 class="mb-2">Meet our team</h3>
   <div class="section-intro mb-3">Section intro goes here lorem ipsum</div>
   <div class="integration-list row justify-content-center py-5">
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar8.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 top-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5 bottom-line-lg"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a></div>
-      <div class="item col-4 col-md-3 col-lg-2 mb-3 mb-lg-5"><a href="#"><img class="shadow rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a></div>
+
+  <div *ngFor="let ourteams of ourteamsx"  class="card-body px-3 px-md-5">
+    <div class="row">
+      <div class="col-lg-6 col-xl-4 col-md-6 col-sm-12">
+        <div class="card card-default p-4">
+          <a href="javascript:0" class="media text-secondary" data-toggle="modal" data-target="#modal-contact">
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 img-fluid rounded" alt="Avatar Image" />
+            <div class="media-body">
+              <h5 class="mt-0 mb-2 text-dark">  {{ourteams.name}} {{ourteams.surname}}</h5>
+              <ul class="list-unstyled text-smoke text-smoke">
+                <li class="d-flex">
+                  <i class="mdi mdi-map mr-1"></i>
+                  <span>Nulla vel metus 15/178</span>
+                </li>
+                <li class="d-flex">
+                  <i class="mdi mdi-email mr-1"></i>
+                  <span>{{ourteams.email}}</span>
+                </li>
+                <li class="d-flex">
+                  <i class="mdi mdi-phone mr-1"></i>
+                  <span>{{ourteams.contact}}</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+
+  </div>
   </div>
   <!--//row-->
   <div class="pt-3 text-center">

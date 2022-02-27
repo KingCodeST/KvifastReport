@@ -12,14 +12,14 @@ import { environment } from 'src/environments/environment';
 
 
 export class ProfileeService{
-    
-    private apiServerUrl =environment.apiBaseUrl; 
+
+    private apiServerUrl =environment.apiBaseUrl;
 
 
     constructor(private http: HttpClient){}
 
     public getProfiles():Observable<Profilee[]>{
-        return this.http.get<Profilee[]>(`${this.apiServerUrl}/Kvisafast/profiles/`);
+        return this.http.get<Profilee[]>(`${this.apiServerUrl}/profiles/`);
     }
 
     public addProfiles(profilee:Profilee):Observable<Profilee>{

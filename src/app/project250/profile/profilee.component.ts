@@ -1,4 +1,3 @@
-import { style } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
 import { Profilee } from "./profilee";
 import { ProfileeService } from "./profilee.service";
@@ -22,13 +21,13 @@ export class ProfileComponent implements OnInit{
         .subscribe((profileData)=>{this.profiles =profileData, console.log(profileData)
         },(error)=>{
             console.log(error);
-    
+
         });
     }
 
-    
-    
-    
+
+
+
 
 
 }

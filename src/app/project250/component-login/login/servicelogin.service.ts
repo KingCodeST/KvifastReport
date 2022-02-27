@@ -2,7 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Componentuser } from '../component-user/componentuser';
+import { Componentuser } from '../../component-user/componentuser';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,11 @@ export class ServiceloginService {
 
 
   public loginUserFromRemote(user :Componentuser ):Observable<any>{
-      return this._http.post<any>(`${this.apiServerUrl}/login`,Componentuser);
+      return this._http.post<any>(`${this.apiServerUrl}Kvisafast/login/login`,Componentuser);
+  }
+
+  public registerUserFromRemote(user:Componentuser):Observable<any>{
+    return this._http.post<any>(`${this.apiServerUrl}Kvisafast/login/registration`,Componentuser);
   }
 
 }

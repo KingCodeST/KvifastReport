@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl:'http://localhost:16906/kvifast'
+  apiBaseUrl:'http://localhost:16906'
  };
 
 /*

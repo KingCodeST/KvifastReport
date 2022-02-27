@@ -7,9 +7,8 @@ import { PaymentComponent } from './project250/payment_s/payments.component';
 import { ProfileComponent } from './project250/profile/profilee.component';
 import { ServicesComponent } from './project250/service_/service.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
-import { ComponentLoginComponent } from './project250/component-login/componentlogin.component';
-import { ComponentAdminComponent } from './project250/component-admin/componentadmin.component';
-import { ComponentUserComponent } from './project250/component-user/componentuser.component';
+import {LoginComponent} from './project250/component-login/login/login.component';
+import { UserregistrationComponent } from './project250/component-user/userregistration.component';
 
 const routes: Routes = [
 
@@ -20,9 +19,8 @@ const routes: Routes = [
   {path:'service',component:ServicesComponent},
   {path:'profile',component:ProfileComponent},
   {path:'ourteams',component:OurteamsComponent},
-  {path:'login',component:ComponentLoginComponent},
-  {path:'account',component:ComponentAdminComponent},
-  {path:'user',component:ComponentUserComponent},
+  {path:'login',component:LoginComponent},
+  {path:'registration',component:UserregistrationComponent},
 
  // otherwise redirect to home
  {path:'**',redirectTo:''}

@@ -12,7 +12,7 @@ import { Ourteams } from "./ourteams";
 export class OurteamsComponent implements OnInit{
 
 
-    ourteams: Ourteams[];
+    ourteamsx: Ourteams[];
 
     constructor(private _ourTeamsService:OurTeamsService){}
 
@@ -25,7 +25,13 @@ export class OurteamsComponent implements OnInit{
     }
 
     getOurteams(){
-
+      this._ourTeamsService.getOurTeam()
+        .subscribe((ourteamdata)=>{this.ourteamsx=ourteamdata,
+              console.log(ourteamdata)
+        },(error )=> {
+          console.log(error);
+          }
+        );
     }
     postOurteams(){
 

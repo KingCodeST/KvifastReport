@@ -10,8 +10,9 @@ import { PaymentmodeComponent } from './project250/paymentmode/paymentmode.compo
 import { HttpClientModule } from '@angular/common/http';
 import { home } from './project250/home/home.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
+import { LoginComponent } from './project250/component-login/login/login.component';
+import { UserregistrationComponent } from './project250/component-user/userregistration.component';
 import { AppRoutingModule } from './app-routing.module';
-
 
 @NgModule({
   declarations: [
@@ -23,9 +24,12 @@ import { AppRoutingModule } from './app-routing.module';
     ServicesComponent,
     PaymentmodeComponent,
     OurteamsComponent,
-    
-   
-   
+    LoginComponent,
+    UserregistrationComponent,
+
+
+
+
 
   ],
   imports: [
@@ -33,7 +37,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     HttpClientModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
