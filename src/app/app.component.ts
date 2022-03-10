@@ -12,5 +12,5 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent  {
   title = 'kvisafastReport';
   parentItem = 'lamp';
-
+  myimage:string ="./assets/media/images.jpeg"
 }

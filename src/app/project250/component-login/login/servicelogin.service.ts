@@ -15,7 +15,7 @@ export class ServiceloginService {
 
 
   public loginUserFromRemote(user :Componentuser ):Observable<any>{
-      return this._http.post<any>(`${this.apiServerUrl}Kvisafast/login/login`,Componentuser);
+      return this._http.post<any>(`${this.apiServerUrl}Kvisafast/user/login`,Componentuser);
   }
 
   public registerUserFromRemote(user:Componentuser):Observable<any>{
