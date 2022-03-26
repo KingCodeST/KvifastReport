@@ -19,19 +19,19 @@ export class ServicesService {
 
 
   public getServicesService():Observable<Services[]>{
-    return this.http.get<Services[]>(`${this.apiServerUrl}/servie`);
+    return this.http.get<Services[]>(`${this.apiServerUrl}/service/readall`);
   }
 
   public addServicesService(servicesservice:Services):Observable<Services>{
-    return this.http.post<Services>(`${this.apiServerUrl}/servicesservice`,servicesservice)
+    return this.http.post<Services>(`${this.apiServerUrl}/service/create`,servicesservice)
   }
 
   public deleteServicesService(servicesserviceId:number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/servicesserviceId/{id}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/serviceId/delete/{id}`);
   }
 
   public updateServicesService(servicesservice:Services):Observable<Services>{
-    return this.http.put<Services>(`${this.apiServerUrl}/servicesserviceId/{id}`,servicesservice);
+    return this.http.put<Services>(`${this.apiServerUrl}/serviceId/update/{id}`,servicesservice);
   }
 
 

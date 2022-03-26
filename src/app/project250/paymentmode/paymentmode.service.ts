@@ -17,19 +17,19 @@ export class PaymentmodeService {
 
 
   public getPaymentMode():Observable<PaymentMode[]>{
-             return this.http.get<PaymentMode[]>(`${this.apiServerUrl}/paymentmodes`);
+             return this.http.get<PaymentMode[]>(`${this.apiServerUrl}/paymentmodes/readall`);
          }
-    
+
          public addPaymentMode(paymentmode:PaymentMode):Observable<PaymentMode>{
-             return this.http.post<PaymentMode>(`${this.apiServerUrl}/paymentmode`,paymentmode);
+             return this.http.post<PaymentMode>(`${this.apiServerUrl}/paymentmode/create`,paymentmode);
          }
-    
+
          public deletePaymentMode(paymentmodeId: number):Observable<void>{
-             return this.http.delete<void>(`${this.apiServerUrl}/paymentmodes/{paymentmodeId}`);
+             return this.http.delete<void>(`${this.apiServerUrl}/paymentmodes/delete/{paymentmodeId}`);
          }
-    
+
          public updatePaymentMode(paymentmode:PaymentMode):Observable<PaymentMode>{
-             return this.http.put<PaymentMode>(`${this.apiServerUrl}/paymentmodes/{id}`,paymentmode);
+             return this.http.put<PaymentMode>(`${this.apiServerUrl}/paymentmodes/update/{id}`,paymentmode);
          }
 
 }

@@ -1,20 +1,20 @@
-<div class="container">
+<div class="icontainer" id="grid-container">
   <h3 class="mb-2">Meet our team</h3>
   <div class="section-intro mb-3">Section intro goes here lorem ipsum</div>
-  <div class="integration-list row justify-content-center py-5">
+  <div class="integration-list row justify-content-center py-5"  >
 
-  <div *ngFor="let ourteams of ourteamsx"  class="card-body px-3 px-md-5">
+  <div *ngFor="let ourteams of ourteamsx"  >
     <div class="row">
       <div class="col-lg-6 col-xl-4 col-md-6 col-sm-12">
         <div class="card card-default p-4">
           <a href="javascript:0" class="media text-secondary" data-toggle="modal" data-target="#modal-contact">
             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 img-fluid rounded" alt="Avatar Image" />
             <div class="media-body">
-              <h5 class="mt-0 mb-2 text-dark">  {{ourteams.name}} {{ourteams.surname}}</h5>
+              <h5 class="mt-0 mb-2 text-dark">{{ourteams.description}} </h5>
               <ul class="list-unstyled text-smoke text-smoke">
                 <li class="d-flex">
                   <i class="mdi mdi-map mr-1"></i>
-                  <span>Nulla vel metus 15/178</span>
+                  <span>{{ourteams.fname}} , {{ourteams.lname}}</span>
                 </li>
                 <li class="d-flex">
                   <i class="mdi mdi-email mr-1"></i>
@@ -36,4 +36,5 @@
   <div class="pt-3 text-center">
       <a class="btn btn-light" href="#">View More</a>
   </div>
+</div>
 </div>

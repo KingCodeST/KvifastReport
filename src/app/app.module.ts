@@ -13,6 +13,9 @@ import { OurteamsComponent } from './project250/out_team/ourteams.component';
 import { LoginComponent } from './project250/component-login/login/login.component';
 import { UserregistrationComponent } from './project250/component-user/userregistration.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AboutusComponent } from './project250/aboutus/aboutus.component';
+import { AccountComponent } from './project250/account/account.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     OurteamsComponent,
     LoginComponent,
     UserregistrationComponent,
+    AboutusComponent,
+    AccountComponent,
 
 
 

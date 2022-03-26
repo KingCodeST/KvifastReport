@@ -1,15 +1,14 @@
 export class Componentuser{
 
-   
+
     email:String;
-    profileid:String;
-    name:String;
-    surname:String;
+    fname:String;
+    lname:String;
     password:String;
     phonenumber:String;
-    roleId:String;
+    country:String;
+    expire_date:String;
     description:String;
     isActive:boolean;
-    
-    constructor(){}
+
 }

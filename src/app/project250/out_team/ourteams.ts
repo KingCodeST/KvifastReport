@@ -1,9 +1,11 @@
 export interface Ourteams{
 
     id:number;
-    name:string;
-    surname:string;
+    fname:string;
+    lname:string;
     contact:string;
     email:string;
+  description:string;
+
 
 }

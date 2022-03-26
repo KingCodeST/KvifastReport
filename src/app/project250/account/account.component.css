@@ -1,1 +1,24 @@
 body{margin-top:20px;}
+.widget .panel, .widget.panel {
+  overflow: hidden;
+}
+
+.widget {
+  margin-bottom: 20px;
+  border: 0;
+}
+
+.bg-danger {
+  background-color: #f05050;
+  color: #fff!important;
+}
+
+.bg-info {
+  background-color: #23b7e5;
+  color: #fff!important;
+}
+
+.bg-primary {
+  background-color: #5d9cec;
+  color: #fff!important;
+}

@@ -15,23 +15,23 @@ export class OurTeamsService{
     private apiServerUrl =environment.apiBaseUrl;
 
     constructor(private http: HttpClient){}
-  
+
     public getOurTeam():Observable<Ourteams[]>{
-      return this.http.get<Ourteams[]>(`${this.apiServerUrl}/ourteamses`);
+      return this.http.get<Ourteams[]>(`${this.apiServerUrl}/ourteam/readall`);
   }
-  
+
   public addOurteams(id:Ourteams):Observable<Ourteams>{
-      return this.http.post<Ourteams>(`${this.apiServerUrl}/ourteam`,id);
+      return this.http.post<Ourteams>(`${this.apiServerUrl}/ourteam/create`,id);
   }
-  
+
   public deleteOurteams(id: number):Observable<void>{
-      return this.http.delete<void>('${this.apiServerUrl}/ourteam/{id}');
+      return this.http.delete<void>('${this.apiServerUrl}/ourteam/delete/{id}');
   }
-  
+
   public updateOurteams(id:Ourteams):Observable<Ourteams>{
-      return this.http.put<Ourteams>('${this.apiServerUrl}/ourteam/{Id}',id);
+      return this.http.put<Ourteams>('${this.apiServerUrl}/ourteam/update/{Id}',id);
   }
-  
+
 
 
 }

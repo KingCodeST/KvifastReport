@@ -9,6 +9,8 @@ import { ServicesComponent } from './project250/service_/service.component';
 import { OurteamsComponent } from './project250/out_team/ourteams.component';
 import {LoginComponent} from './project250/component-login/login/login.component';
 import { UserregistrationComponent } from './project250/component-user/userregistration.component';
+import {AboutusComponent} from './project250/aboutus/aboutus.component';
+import {AccountComponent} from './project250/account/account.component';
 
 const routes: Routes = [
 
@@ -19,8 +21,10 @@ const routes: Routes = [
   {path:'service',component:ServicesComponent},
   {path:'profile',component:ProfileComponent},
   {path:'ourteams',component:OurteamsComponent},
+  {path:'aboutus',component:AboutusComponent},
   {path:'login',component:LoginComponent},
   {path:'registration',component:UserregistrationComponent},
+  {path:'account',component:AccountComponent},
 
  // otherwise redirect to home
  {path:'**',redirectTo:''}

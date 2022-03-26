@@ -19,15 +19,15 @@ export class PaymentService {
 }
 
 public addPayment(payments:Payment):Observable<Payment>{
-    return this.http.post<Payment>(`${this.apiServerUrl}/payment`,payments);
+    return this.http.post<Payment>(`${this.apiServerUrl}/payment/readall`,payments);
 }
 
 public deletePayment(paymentId: number):Observable<void>{
-    return this.http.delete<void>('${this.apiServerUrl}/payment/{paymentId}');
+    return this.http.delete<void>('${this.apiServerUrl}/payment/delete/{paymentId}');
 }
 
 public updatePayment(paymentId:Payment):Observable<Payment>{
-    return this.http.put<Payment>('${this.apiServerUrl}/payment/{paymentId}',paymentId);
+    return this.http.put<Payment>('${this.apiServerUrl}/payment/update/{paymentId}',paymentId);
 }
 
 
