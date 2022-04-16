@@ -21,7 +21,7 @@ export class PaymentComponent implements OnInit{
         this.deletePayment();
     }
 
-    getPayment(){
+    getPayment():void{
         this._paymentservice.getPayment()
         .subscribe(
             (paymentData: Payment[])=>{this.payment = paymentData, console.log(paymentData)
@@ -40,9 +40,9 @@ export class PaymentComponent implements OnInit{
     }
 
     deletePayment(){
-        
+
     }
 
-    
+
 
 }

@@ -15,19 +15,19 @@ export class PaymentService {
   constructor(private http: HttpClient){}
 
   public getPayment():Observable<Payment[]>{
-    return this.http.get<Payment[]>(`${this.apiServerUrl}/payments`);
+    return this.http.get<Payment[]>(`${this.apiServerUrl}/Kvisafast/api/v1/payment/readall`);
 }
 
 public addPayment(payments:Payment):Observable<Payment>{
-    return this.http.post<Payment>(`${this.apiServerUrl}/payment/readall`,payments);
+    return this.http.post<Payment>(`${this.apiServerUrl}/Kvisafast/api/v1/payment/create`,payments);
 }
 
 public deletePayment(paymentId: number):Observable<void>{
-    return this.http.delete<void>('${this.apiServerUrl}/payment/delete/{paymentId}');
+    return this.http.delete<void>('${this.apiServerUrl}/Kvisafast/api/v1/payment/delete/{paymentId}');
 }
 
 public updatePayment(paymentId:Payment):Observable<Payment>{
-    return this.http.put<Payment>('${this.apiServerUrl}/payment/update/{paymentId}',paymentId);
+    return this.http.put<Payment>('${this.apiServerUrl}/Kvisafast/api/v1/payment/update/{paymentId}',paymentId);
 }
 
 

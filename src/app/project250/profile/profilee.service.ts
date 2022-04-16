@@ -19,19 +19,19 @@ export class ProfileeService{
     constructor(private http: HttpClient){}
 
     public getProfiles():Observable<Profilee[]>{
-        return this.http.get<Profilee[]>(`${this.apiServerUrl}/profiles/`);
+        return this.http.get<Profilee[]>(`${this.apiServerUrl}/Kvisafast/api/v1/profiles/`);
     }
 
     public addProfiles(profilee:Profilee):Observable<Profilee>{
-        return this.http.post<Profilee>(`${this.apiServerUrl}/profilee/add`,profilee);
+        return this.http.post<Profilee>(`${this.apiServerUrl}/Kvisafast/api/v1/profilee/add`,profilee);
     }
 
     public deleteProfiles(profileeId: number):Observable<void>{
-        return this.http.delete<void>(`${this.apiServerUrl}/profilee/delete/${profileeId}`);
+        return this.http.delete<void>(`${this.apiServerUrl}/Kvisafast/api/v1/profilee/delete/${profileeId}`);
     }
 
     public updateProfiles(profilee:Profilee):Observable<Profilee>{
-        return this.http.put<Profilee>(`${this.apiServerUrl}/profilee/update`,profilee);
+        return this.http.put<Profilee>(`${this.apiServerUrl}/Kvisafast/api/v1/profilee/update`,profilee);
     }
 
 }

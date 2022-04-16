@@ -2,7 +2,7 @@
     <div class="panel-body inf-content">
         <div class="row">
             <div class="col-md-4">
-                <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
+                <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
                 <ul title="Ratings" class="list-inline ratings text-center">
                     <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
@@ -14,103 +14,116 @@
             <div class="col-md-6">
                 <strong>Information</strong><br>
                 <div class="table-responsive">
-                <table class="table table-user-information">
+                <table *ngFor="let usr of users" class="table table-user-information">
                     <tbody>
-                        <tr>        
+                        <tr>
                             <td>
                                 <strong>
                                     <span class="glyphicon glyphicon-asterisk text-primary"></span>
-                                    Identificacion                                                
+                                    Identificacion
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                123456789     
+                                {{usr.fname
+
+                              }}
                             </td>
                         </tr>
-                        <tr>    
+                        <tr>
                             <td>
                                 <strong>
-                                    <span class="glyphicon glyphicon-user  text-primary"></span>    
-                                    Name                                                
+                                    <span class="glyphicon glyphicon-user  text-primary"></span>
+                                    Name
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                Bootdey     
+                              {{usr.fname}}
                             </td>
                         </tr>
-                        <tr>        
+                        <tr>
                             <td>
                                 <strong>
-                                    <span class="glyphicon glyphicon-cloud text-primary"></span>  
-                                    Lastname                                                
+                                    <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                    Lastname
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                Bootstrap  
+                              {{usr.lname}}
                             </td>
                         </tr>
-    
-                        <tr>        
+
+                        <tr>
                             <td>
                                 <strong>
-                                    <span class="glyphicon glyphicon-bookmark text-primary"></span> 
-                                    Username                                                
+                                    <span class="glyphicon glyphicon-bookmark text-primary"></span>
+                                    Username
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                bootnipets 
+                              {{usr.email}}
                             </td>
                         </tr>
-    
-    
-                        <tr>        
+
+
+                        <tr>
                             <td>
                                 <strong>
-                                    <span class="glyphicon glyphicon-eye-open text-primary"></span> 
-                                    Role                                                
+                                    <span class="glyphicon glyphicon-eye-open text-primary"></span>
+                                    Role
                                 </strong>
                             </td>
                             <td class="text-primary">
                                 Admin
                             </td>
                         </tr>
-                        <tr>        
+                        <tr>
                             <td>
                                 <strong>
-                                    <span class="glyphicon glyphicon-envelope text-primary"></span> 
-                                    Email                                                
+                                    <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                    Email
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                noreply@email.com  
+                              {{usr.email}}
                             </td>
                         </tr>
-                        <tr>        
+                        <tr>
                             <td>
                                 <strong>
                                     <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                    created                                                
+                                    Country
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                20 jul 20014
+                              {{usr.country}}
                             </td>
                         </tr>
-                        <tr>        
+                        <tr>
                             <td>
                                 <strong>
                                     <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                    Modified                                                
+                                    Description
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                 20 jul 20014 20:00:00
+                              {{usr.description}}
                             </td>
-                        </tr>                                    
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>
+                              <span class="glyphicon glyphicon-calendar text-primary"></span>
+                              Expire Date
+                            </strong>
+                          </td>
+                          <td class="text-primary">
+                            {{usr.expire_date}}
+                          </td>
+                        </tr>
                     </tbody>
                 </table>
                 </div>
             </div>
         </div>
     </div>
-    </div>                                        
+    </div>

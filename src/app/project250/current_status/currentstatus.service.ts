@@ -16,21 +16,21 @@ export class CurrentstatusService {
   constructor(private http: HttpClient){}
 
   public getCurrentStatus():Observable<CurrentStatus[]>{
-    return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/Kvisafast/work/currentstatus/readall`);
+    return this.http.get<CurrentStatus[]>(`${this.apiServerUrl}/Kvisafast/api/v1/currentstatus/readall`);
 }
 
 
 
 public addCurrentStatus(currentstatus:CurrentStatus):Observable<CurrentStatus>{
-    return this.http.post<CurrentStatus>(`${this.apiServerUrl}/currentstatus/create`,currentstatus);
+    return this.http.post<CurrentStatus>(`${this.apiServerUrl}/Kvisafast/api/v1/currentstatus/create`,currentstatus);
 }
 
 public deleteCurrentStatus(currentstatusID: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/currentstatus/delete/{currentstatusID}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/Kvisafast/api/v1/delete/{currentstatusID}`);
 }
 
 public updateCurrentStatus(currentstatusID:CurrentStatus):Observable<CurrentStatus>{
-    return this.http.put<CurrentStatus>(`${this.apiServerUrl}/currentstatus/update/{currentstatusID}`,currentstatusID);
+    return this.http.put<CurrentStatus>(`${this.apiServerUrl}/Kvisafast/api/v1/update/{currentstatusID}`,currentstatusID);
 }
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Services } from './services';
 import { environment } from 'src/environments/environment';
 
@@ -19,19 +19,23 @@ export class ServicesService {
 
 
   public getServicesService():Observable<Services[]>{
-    return this.http.get<Services[]>(`${this.apiServerUrl}/service/readall`);
+    // let username='client'
+    // let password='Abc123'
+    // const headers=new HttpHeaders({Authorization:'Basic'+btoa(username+':'+password)});
+
+    return this.http.get<Services[]>(`${this.apiServerUrl}/Kvisafast/api/v1/service/readall`);
   }
 
   public addServicesService(servicesservice:Services):Observable<Services>{
-    return this.http.post<Services>(`${this.apiServerUrl}/service/create`,servicesservice)
+    return this.http.post<Services>(`${this.apiServerUrl}/Kvisafast/api/v1/service/create`,servicesservice)
   }
 
   public deleteServicesService(servicesserviceId:number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/serviceId/delete/{id}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/Kvisafast/api/v1/serviceId/delete/{id}`);
   }
 
   public updateServicesService(servicesservice:Services):Observable<Services>{
-    return this.http.put<Services>(`${this.apiServerUrl}/serviceId/update/{id}`,servicesservice);
+    return this.http.put<Services>(`${this.apiServerUrl}/Kvisafast/api/v1/serviceId/update/{id}`,servicesservice);
   }
 
 

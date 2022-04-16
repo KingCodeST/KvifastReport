@@ -14,7 +14,7 @@ import {error} from 'protractor';
 export class UserregistrationComponent implements OnInit {
 
     savedusers: Componentuser[];
-  public edituser :  Componentuser;
+  public edituser :Componentuser=new Componentuser();
   msg ="";
  public addForm: NgForm;
 
@@ -29,6 +29,7 @@ export class UserregistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.getRegisteredUsers();
+    this.registerUser();
   }
 
   public getRegisteredUsers(): void{

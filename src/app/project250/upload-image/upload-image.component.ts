@@ -31,7 +31,7 @@ export class UploadImageComponent implements OnInit {
     //FormDate API provides
     const uploadImageData = new FormData();
     uploadImageData.append('imageFile',this.selectedFile,this.selectedFile.name)
-    this.httpClient.post(`${this.apiServerUrl}/image/upload`,uploadImageData,{ observe:'response'})
+    this.httpClient.post(`${this.apiServerUrl}Kvisafast/image/upload`,uploadImageData,{ observe:'response'})
       .subscribe((response)=>{
         if(response.status === 200){
           this.message ='Imageuploaded successfully';
@@ -42,7 +42,7 @@ export class UploadImageComponent implements OnInit {
     }
 
     getImage(){
-    this.httpClient.get(`${this.apiServerUrl}/image/get/`+this.imageName)
+    this.httpClient.get(`${this.apiServerUrl}Kvisafast/image/get/`+this.imageName)
       .subscribe(
         res =>{
           this.retrieveResponse.picByte;
