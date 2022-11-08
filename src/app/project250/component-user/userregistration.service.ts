@@ -15,7 +15,7 @@ export class UserregistrationService {
   constructor(private _http : HttpClient) { }
 
   public registerUserFromRemote(user:Componentuser):Observable<any>{
-    return this._http.post<any>(`${this.apiServerUrl}/Kvisafast/api/v1/reg/registration`,user);
+    return // this._http.post<any>(`${this.apiServerUrl}/Kvisafast/api/v1/reg/registration`,user);
   }
 
 

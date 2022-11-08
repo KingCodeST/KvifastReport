@@ -1,8 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, ElementRef,AfterViewInit,Renderer2} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Componentuser} from './componentuser';
 import {UserregistrationService} from './userregistration.service';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 import {HttpErrorResponse} from '@angular/common/http';
 import {error} from 'protractor';
 
@@ -18,7 +18,10 @@ export class UserregistrationComponent implements OnInit {
   msg ="";
  public addForm: NgForm;
 
-  constructor(private registationService:UserregistrationService,private _router: Router) { }
+  constructor(private registationService:UserregistrationService,
+              private _router: Router,
+              private renderer: Renderer2,
+              private route: ActivatedRoute) { }
 
 //   @Input(){
 //     fname:string;
@@ -58,6 +61,11 @@ export class UserregistrationComponent implements OnInit {
       (error:HttpErrorResponse)=>{
         alert(error.message);
         addForm.reset();
+      },
+      () =>{
+        let form: HTMLFormElement =<HTMLFormElement>document.getElementById('registerform')
+
+        form.submit();
       }
     );
 
@@ -67,6 +75,7 @@ export class UserregistrationComponent implements OnInit {
       data=>{
         console.log("response received");
         this._router.navigate(['/profile'])
+        
       },error => {
         console.log("exception occurred")
         this.msg ="Bad credentials, please enter valid email and password";
