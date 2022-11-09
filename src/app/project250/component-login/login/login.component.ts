@@ -62,7 +62,7 @@ saveuser:Componentuser[];
       data =>{
         console.log("response received");
         this._router.navigate(['/home'])
-
+        console.log(data);
       },
       error =>{
         console.log("exception occurred")

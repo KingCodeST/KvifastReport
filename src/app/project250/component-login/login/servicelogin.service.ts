@@ -28,7 +28,7 @@ export class ServiceloginService {
 
   public loginUserFromRemote(user :Componentuser ):Observable<any>{
   //    const headers=new HttpHeaders({Authorization:'Basic'+btoa(user.email+':'+user.password)})
-      return this._http.post<any>(`${this.apiServerUrl}/Kvisafast/api/v1/log/login`,user);
+      return //this._http.post<any>(`${this.apiServerUrl}/Kvisafast/api/v1/log/login`,user);
   }
 
 

@@ -1,21 +1,22 @@
 <div class="container" >
-  <h3 class="mb-2">Meet our team</h3>
-  <div class="section-intro mb-3">Section intro goes here lorem ipsum</div>
-
-    <div class="row" *ngFor="let ourteams of ourteamsx"  >
-      <div class=" col -horizontal " style="width: 18rem;" >
-        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 img-fluid rounded" alt="Avatar Image" />
+  <h3 class="h3" style="text-align: center">Meet our team</h3>
+  <p class="primary"  style="text-align: center">Section intro goes here lorem ipsum</p>
+<!--  section-intro mb-3-->
+  <div class="card-deck">
+    <div class="card" *ngFor="let ourteams of ourteamsx"  >
+      <div class=" card-body "  >
+        <img  src="https://bootdey.com/img/Content/avatar/avatar1.png" class="card-img-top" alt="Avatar Image" />
         <h5 class="card-title">{{ourteams.description}}</h5>
         <ul class="list-unstyled text-smoke text-smoke">
-          <li class="d-flex">
+          <li class="card-text">
             <i class="mdi mdi-map mr-1"></i>
             <span>{{ourteams.fname}} , {{ourteams.lname}}</span>
           </li>
-          <li class="d-flex">
+          <li class="card-text">
             <i class="mdi mdi-email mr-1"></i>
             <span>{{ourteams.email}}</span>
           </li>
-          <li class="d-flex">
+          <li class="card-text">
             <i class="mdi mdi-phone mr-1"></i>
             <span>{{ourteams.contact}}</span>
           </li>
@@ -33,7 +34,7 @@
   <div class="pt-3 text-center">
       <a class="btn btn-light" href="#">View More</a>
   </div>
-
+  </div>
 
 
 </div>

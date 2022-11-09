@@ -12,6 +12,46 @@ body{
     background-color: #f4f6f9;
 }
 
+nav{
+  top: 0px;
+  margin-top: 0%;
+  background-color: #00aced;
+}
+
+nav .logo{
+  width:40px;
+  height:35px;
+  border-radius: 50px;
+}
+
+.navbar{
+  top: -20px;
+
+}
+
+.sidebar a{
+  display: none;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+
+}
+
+.sidebar{
+  top: 20px;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x:hidden ;
+  padding-top: 16px;
+  display: none;
+}
+
 .avatar-xl img {
     width: 110px;
 }
@@ -75,10 +115,20 @@ img {
 
 /* Login */
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 1003px) {
   .omb_row-sm-offset-3 div:first-child[class*="col-"] {
     margin-left: 25%;
   }
+
+  .sidebar a{
+    display: block;
+  }
+
+  .sidebar{
+    display: block;
+  }
+
+
 }
 
 .omb_login .omb_authTitle {
@@ -138,36 +188,137 @@ span{
 }
 
 
-@media (min-width: 768px) {
+
+.main{
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 768px) {
   .omb_login .omb_forgotPwd {
     text-align: right;
     margin-top:10px;
   }
-}
+  .sidebar a{
+    display: block;
 
-@media (min-width: 320px){
 
-}
+  }
 
-@media (min-width: 481px){
+  .sidebar{
 
-}
-
-@media (min-width: 641px){
-
-}
-
-@media (min-width: 961px){
+    display: block;
+  }
 
 }
 
-@media (min-width: 1025px){
+@media only screen and (max-width: 320px){
+
+.navbar{
+  display: none;
+}
+  .omb_login .omb_socialButtons .omb_btn-facebook {
+    background: #f05050;
+
+  }
+  .omb_login .omb_socialButtons .omb_btn-twitter {background: #f05050;}
+  .omb_login .omb_socialButtons .omb_btn-google {background: #f05050;}
+
+  .sidebar a{
+    display: block;
+
+  }
+
+  .sidebar{
+    display: block;
+  }
 
 }
 
-@media (min-width: 1281px){
+@media only screen and(min-width: 481px){
+
+  .navbar{
+    display: none;
+  }
+
+  .sidebar a:hover{
+    color:#f1f1f1;
+    text-decoration: none;
+  }
+
+  .sidebar a{
+    display: block;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+  }
+
+  .omb_login .omb_socialButtons .omb_btn-facebook {
+    background: #f05050;
+  }
+
+  .col-xs-4{
+    width: 50px;
+    height: 50px;
+  }
+
+  .omb_btn-facebook{
+    width: 10px;
+  }
+
+  .omb_login .omb_socialButtons .omb_btn-twitter {
+    background: #f05050;
+    width: 10px;
+    height: 10px;
+  }
+  .omb_login .omb_socialButtons .omb_btn-google {
+    background: #f05050;
+    width: 10px;
+    height: 10px;
+  }
+
+  p{
+    text-align: center;
+  }
 
 }
+
+
+
+@media only screen and (max-width: 950px){
+  .navbar{
+    display: none;
+    top:0px;
+    transition: top 0.4s;
+    position: fixed;
+    background-color: #333;
+  }
+
+
+  .sidebar{
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: -20px;
+    left: 0;
+    background-color:#111 ;
+    overflow-x:hidden ;
+    padding-top:16px ;
+    font-size: 18px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
 
 /*service */
 
@@ -681,7 +832,7 @@ body{
   margin-top: 5px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   ul.timeline:before {
     left: 40px;
   }
@@ -874,7 +1025,7 @@ body{
   margin-top: 5px;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   ul.timeline:before {
     left: 40px;
   }

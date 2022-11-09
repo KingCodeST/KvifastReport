@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CurrentStatusComponent } from './project250/current_status/currentstatus.componet';
 import { ProfileComponent } from './project250/profile/profilee.component';
@@ -15,6 +15,8 @@ import { UserregistrationComponent } from './project250/component-user/userregis
 import { AppRoutingModule } from './app-routing.module';
 import { AboutusComponent } from './project250/aboutus/aboutus.component';
 import { AccountComponent } from './project250/account/account.component';
+import { UploadImageComponent } from './project250/upload-image/upload-image.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,9 +33,7 @@ import { AccountComponent } from './project250/account/account.component';
     UserregistrationComponent,
     AboutusComponent,
     AccountComponent,
-
-
-
+    UploadImageComponent,
 
 
   ],
@@ -41,7 +41,11 @@ import { AccountComponent } from './project250/account/account.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+
+
 
   ],
   providers: [],

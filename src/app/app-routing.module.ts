@@ -11,6 +11,7 @@ import {LoginComponent} from './project250/component-login/login/login.component
 import { UserregistrationComponent } from './project250/component-user/userregistration.component';
 import {AboutusComponent} from './project250/aboutus/aboutus.component';
 import {AccountComponent} from './project250/account/account.component';
+import {UploadImageComponent } from './project250/upload-image/upload-image.component'
 
 const routes: Routes = [
 
@@ -25,9 +26,16 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:UserregistrationComponent},
   {path:'account',component:AccountComponent},
+  {path:'uploadpicture',component:UploadImageComponent},
+
+
+
+
 
  // otherwise redirect to home
  {path:'**',redirectTo:''}
+
+
 
 ];
 

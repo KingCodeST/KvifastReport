@@ -1,18 +1,30 @@
 <!---Nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav  class="navbar navbar-dark py-0 bg-primary navbar-expand-lg bg-dark">
+  <div class="navbar-collapse  collapse" id="navbarNav">
+  <a class="nav-brand" href="#">
+    <img class="logo"  src="favicon.ico">
+  </a>
     <div  class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/service">Service</a>
-        <a class="nav-item nav-link" routerLink="/ourteams">OurTeam</a>
-        <a class="nav-item nav-link" routerLink="/aboutus">About US</a>
-
+        <a class="nav-item nav-link  " routerLink="/">HOME</a>
+        <a class="nav-item nav-link" routerLink="/service">SERVICE</a>
+        <a class="nav-item nav-link" routerLink="/ourteams">OUR-TEAM</a>
+        <a class="nav-item nav-link" routerLink="/aboutus">ABOUT-US</a>
+      <a class="nav-item nav-link" routerLink="/login">LOGIN</a>
+      <a class="nav-item nav-link" routerLink="/account">ACCOUNT</a>
     </div>
-    <div class="navbar-nav" style="margin-right:auto ;" >
-        <a class="nav-item nav-link" routerLink="/login">Login</a>
-        <a class="nav-item nav-link" routerLink="/account">Account</a>
-
-    </div>
+  </div>
 </nav>
+<!--Sidebar -->
+<div class="sidebar">
+  <a href="#home"><i class="fa fa-home active"></i></a>
+  <a routerLink="/service"><i class="fa fa-truck active"></i></a>
+  <a routerLink="/ourteams"><i class="fa fa-group active"></i></a>
+  <a routerLink="/aboutus"><i class="fa fa-archive active"></i></a>
+  <a routerLink="/login"><i class="fa fa-male active"></i></a>
+  <a routerLink="/account"><i class="fa fa-male active"></i></a>
+
+
+</div>
 
 <!-- Main content container -->
 <div class="jumbotron">
@@ -25,7 +37,19 @@
     </div>
 </div>
 
+<!--<script>-->
+<!--  var prevScrollpos =window.pageYOffset;-->
+<!--  window.onscroll = function (){-->
+<!--    var currentScrollpos =window.pageYOffset;-->
+<!--    if (prevScrollpos>currentScrollpos){-->
+<!--      document.getElementById("navbar2").style.top ="0";-->
+<!--    }else {-->
+<!--      document.getElementById("navbar2").style.top ="-50px ";-->
+<!--    }-->
+<!--    prevScrollpos =currentScrollpos;-->
+<!--  }-->
 
+<!--</script>-->
 
 
 
