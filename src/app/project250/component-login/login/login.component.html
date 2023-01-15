@@ -35,24 +35,23 @@
 
     <div class="row omb_row-sm-offset-3">
       <div class="col-xs-12 col-sm-6">
-        <form class="omb_loginForm " (ngSubmit)="loginUser()"   >
+        <form   class="omb_loginForm " (ngSubmit)="login()"   >
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text"  class="form-control" name="username" placeholder="email address" [(ngModel)]="user.email" required #email="ngModel"
-            [class.is-invalid]="email.invalid" > <br>
+            <input type="text"  class="form-control" [(ngModel)]="username" placeholder="email address"
+            [class.is-invalid]="user.email" > <br>
           </div>
-          <div *ngIf="email.control == null   " >
+          <div *ngIf="user.email != null   " >
             <small class="text-danger">Email Id is required field</small>
             <span class="help-block"></span>
           </div>
 
-
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input formControlName="password" id="password" type="password" class="form-control" name="password" placeholder="Password"  [(ngModel)]="user.password "required #passworda="ngModel"
+            <input  id="password" type="password" class="form-control"  placeholder="Password" [(ngModel)]="password"
             [class.is-invalid]="user.password" >
           </div>
-          <div *ngIf="passworda.control == null" >
+          <div *ngIf="user.password !== null">
                       <span class="help-block"> Password error </span>
             <small class="text-danger">Password Id is required field</small>
 

@@ -5,7 +5,7 @@ import {ServiceloginService} from './servicelogin.service';
 import {Componentuser} from '../../component-user/componentuser';
 import {HttpErrorResponse} from '@angular/common/http';
 import {error} from 'protractor';
-import {NgForm} from '@angular/forms';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 
 
 @Component({
@@ -14,14 +14,70 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  username: string;
+  password: string;
+  errorMessage:string;
+  loginForm:FormGroup;
+  loading = false;
+  submitted = false;
+
 public user:Componentuser=new Componentuser();
 saveuser:Componentuser[];
  msg='';
-  constructor(private _service:ServiceloginService,private _router: Router) { }
+  constructor(
+    private _service:ServiceloginService,
+    private _router: Router,
+    private formBuilder: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
     this.loginUser();
     this.getLoginUser();
+    this.loginForm = this.formBuilder.group({
+        username:['', Validators.required],
+        password:['', Validators.required]
+    });
+  }
+
+  get f(){
+  return this.loginForm.controls;
+  }
+
+  onSubmit(){
+    this.submitted = true;
+
+    if(this.loginForm.invalid){
+      return;
+    }
+
+    this.loading = true;
+    this._service.loginUserFromRemote(
+      this.f.username.value
+      ).subscribe(
+        data =>{
+          console.log(data)
+          this._router.navigate(['/profile']);
+        },
+      error =>{
+          this.loading = false;
+      }
+    )
+
+  }
+
+  login(){
+    this._service.login(
+      this.username,
+      this.password
+    ).subscribe(
+      () =>{
+        this._router.navigate(['/profile'])
+      },
+      error =>{
+        this.errorMessage ='UserName or Password is Incorrect';
+      }
+    );
   }
 
   public addForm: NgForm;

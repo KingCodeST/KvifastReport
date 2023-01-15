@@ -17,6 +17,8 @@ import { AboutusComponent } from './project250/aboutus/aboutus.component';
 import { AccountComponent } from './project250/account/account.component';
 import { UploadImageComponent } from './project250/upload-image/upload-image.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AboutusComponent,
     AccountComponent,
     UploadImageComponent,
+    AdminViewComponent,
 
 
   ],
@@ -44,7 +47,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-
+    SlickCarouselModule,
 
 
   ],
